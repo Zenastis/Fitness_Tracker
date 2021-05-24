@@ -1,5 +1,8 @@
 const mongoose = require ("mongoose")
 const Scheema = mongoose.Scheema
+
+
+
 const workoutScheema = new Scheema ({
     day:{
         type:Date,
@@ -12,9 +15,25 @@ const workoutScheema = new Scheema ({
                 trim:true,
             },
             name:{
-                type:String
+                type:String,
+                trim:true,
             },
-
+            weight:{
+                type:Number,
+                trim:true,
+            },
+            sets:{
+                type:Number,
+                trim:true,
+            },
+            reps:{
+                type:Number,
+                trim:true,
+            },
+            duration:{
+                type:Number,
+                trim:true,
+            },
         }
     ]
 })

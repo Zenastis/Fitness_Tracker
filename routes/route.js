@@ -64,3 +64,13 @@ router.get("/api/workouts/range", (req, res) => {
             res.json(err)
         })
 })
+
+router.delete("/api/workouts", (req, res) => {
+    Workout.destroy({})
+    .then((workoutDb) => {
+        res.json(workoutDb)
+    })
+    .catch((err) => {
+        res.json(err)
+    })
+})
